@@ -45,11 +45,11 @@ useHead({
               <h2 class="text-2xl font-bold">Éditeur du site</h2>
               <div class="mt-4 space-y-2 leading-7 text-slate-600">
                 <p>Nom commercial : {{ siteData.brand.name }}</p>
-                <p>Raison sociale : [à compléter]</p>
-                <p>Forme juridique : [à compléter]</p>
-                <p>Capital social : [à compléter]</p>
-                <p>SIRET / RCS : [à compléter]</p>
-                <p>Adresse du siège social : [à compléter]</p>
+                <p>Raison sociale : EI Quentin Taymont</p>
+                <p>Forme juridique : Micro-entreprise</p>
+                <p>Capital social : 3000€</p>
+                <p>SIRET / RCS : 94477727500016</p>
+                <p>Adresse du siège social : 673 rue du Sergenteret, Choisy-au-Bac, 60750</p>
                 <p>E-mail : <a :href="`mailto:${siteData.brand.email}`" class="font-semibold text-royal-950 underline decoration-gold-400/50 underline-offset-4">{{ siteData.brand.email }}</a></p>
                 <p>Téléphone : <a :href="siteData.brand.phoneHref" class="font-semibold text-royal-950 underline decoration-gold-400/50 underline-offset-4">{{ siteData.brand.phone }}</a></p>
               </div>

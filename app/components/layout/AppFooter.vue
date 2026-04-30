@@ -44,7 +44,7 @@ import { siteData } from '~/data/site'
 
       <div class="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-ivory-50/54 sm:flex-row sm:items-center sm:justify-between">
         <p>© {{ new Date().getFullYear() }} {{ siteData.brand.name }}. Tous droits réservés.</p>
-        <p>Site one page Nuxt optimisé SEO et performance.</p>
+        <p>Site powered by <a href="https://majorcraft.romainnigond.fr" target="_blank" rel="noopener noreferrer" class="transition hover:text-gold-200">Majorcraft</a></p>
       </div>
     </Container>
   </footer>
