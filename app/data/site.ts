@@ -1,3 +1,5 @@
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://subleasing.example.com'
+
 export const siteData = {
   brand: {
     name: 'Sub Leasing Prestige',
@@ -13,8 +15,8 @@ export const siteData = {
     title: 'Sub Leasing Prestige | Gestion locative premium et loyer garanti',
     description:
       'Sub Leasing Prestige accompagne les propriétaires avec une solution de sous-location professionnelle, loyer mensuel garanti, gestion complète et sélection rigoureuse des occupants.',
-    image: '/images/hero-residence.avif',
-    url: 'https://subleasing.example.com',
+    image: '/images/hero-residence.png',
+    url: siteUrl,
   },
   navigation: [
     { label: 'À propos', href: '#a-propos' },
@@ -141,33 +143,60 @@ export const siteData = {
     items: [
       {
         question: 'Comment savoir si mon bien est éligible à votre service ?',
-        answer:
-          "Il suffit de nous contacter pour en discuter. Si besoin, nous organisons une rencontre afin d'évaluer ensemble si votre logement correspond à nos critères.",
+        answer: [
+          { text: 'Il vous suffit de nous contacter pour en discuter ! Si besoin, nous pouvons organiser une rencontre afin d’évaluer ensemble si votre logement correspond à nos critères. Nos coordonnées sont disponibles en bas de cette page — n’hésitez pas, nous serons ravis d’échanger avec vous.' },
+        ],
       },
       {
         question: 'Êtes-vous une agence immobilière ?',
-        answer:
-          "Non. Il n'y a donc aucun frais d'agence ni commission. Nous proposons une gestion locative sur mesure et louons votre bien pour le mettre à disposition d'une clientèle sélectionnée.",
+        answer: [
+          { text: 'Non, nous ne sommes pas une agence immobilière. Il n’y a donc ' },
+          { text: 'aucun frais d’agence ni commission', strong: true },
+          { text: ' à prévoir. Nous proposons un service de ' },
+          { text: 'gestion locative sur-mesure', strong: true },
+          { text: ' : nous louons votre bien pour le mettre à disposition de notre clientèle soigneusement sélectionnée, composée de professionnels et de voyageurs haut de gamme. Que le logement soit occupé ou non, ' },
+          { text: 'vous percevez vos revenus de façon fixe, fiable et ponctuelle.', strong: true },
+        ],
       },
       {
-        question: "Quelle est la différence avec un bail d'habitation classique ?",
-        answer:
-          'Notre contrat est un bail dérogatoire conclu entre vous et notre société. Il offre plus de souplesse et permet de garder la maîtrise de votre bien selon les conditions convenues.',
+        question: 'Quelle est la différence entre votre bail et un bail d’habitation classique ?',
+        answer: [
+          { text: 'Contrairement à un bail classique signé avec un particulier — souvent à durée indéterminée et avec des délais de préavis longs — notre contrat est un ' },
+          { text: 'bail dérogatoire', strong: true },
+          { text: ', conclu entre vous (le propriétaire) et notre société. Ce type de bail est ' },
+          { text: 'beaucoup plus souple', strong: true },
+          { text: ' : les deux parties peuvent y mettre fin à tout moment, avec un simple ' },
+          { text: 'préavis de quelques semaines', strong: true },
+          { text: '. C’est une solution plus flexible et sécurisante, qui vous permet de garder la maîtrise de votre bien sans les contraintes habituelles.' },
+        ],
       },
       {
         question: 'Le loyer est-il vraiment garanti chaque mois ?',
-        answer:
-          'Oui. Le paiement du loyer fixe et ponctuel est notre engagement numéro un, que le logement soit occupé ou non.',
+        answer: [
+          { text: 'Absolument. Le paiement de votre loyer est notre priorité et notre engagement numéro un. Votre bien représente pour nous un véritable outil de travail, et c’est en vous versant un loyer fixe et ponctuel, chaque début de mois, que nous assurons la stabilité de notre activité.\nChez ' },
+          { text: 'Sub Leasing Prestige', strong: true },
+          { text: ', vous êtes payé que votre logement soit occupé ou non. Vous avez ainsi la tranquillité d’esprit d’avoir trouvé un locataire fiable, sérieux et durable.' },
+        ],
       },
       {
         question: 'Comment assurez-vous le bon entretien du bien ?',
-        answer:
-          "Notre personnel intervient régulièrement pour vérifier l'état du logement, assurer le nettoyage et garantir une remise en état impeccable entre chaque séjour.",
+        answer: [
+          { text: 'Nous faisons intervenir régulièrement notre personnel d’entretien pour vérifier l’état du logement, effectuer les contrôles nécessaires et garantir une remise en état irréprochable entre chaque séjour. Cela nous permet d’assurer la ' },
+          { text: 'qualité constante du bien', strong: true },
+          { text: ', de préserver sa valeur sur le long terme et de maintenir ' },
+          { text: 'l’image haut de gamme', strong: true },
+          { text: ' de nos services. Votre logement reste toujours en excellent état, comme si c’était le nôtre.' },
+        ],
       },
       {
         question: 'Vais-je perdre mes avantages fiscaux LMNP ?',
-        answer:
-          'Non, le bail est pensé pour rester compatible avec le statut LMNP lorsque le bien reste meublé et répond aux critères exigés. À confirmer avec votre conseil fiscal selon votre situation.',
+        answer: [
+          { text: 'Non, vous conservez tous les avantages du statut ' },
+          { text: 'LMNP (Loueur Meublé Non Professionnel)', strong: true },
+          { text: '. Notre bail est spécialement conçu pour être ' },
+          { text: 'compatible avec ce régime fiscal', strong: true },
+          { text: ', tant que votre bien reste meublé et répond aux critères exigés par l’administration. Vous continuez donc à bénéficier de la fiscalité avantageuse du LMNP, tout en déléguant la gestion à un professionnel de confiance.' },
+        ],
       },
     ],
   },

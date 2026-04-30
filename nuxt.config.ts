@@ -30,7 +30,9 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#0E2044' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/favicon.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       ],
     },
   },
@@ -44,12 +46,39 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
+    '/mentions-legales': { prerender: true },
+    '/robots.txt': { prerender: true },
+    '/sitemap.xml': { prerender: true },
   },
 
   nitro: {
     prerender: {
-      routes: ['/'],
+      routes: ['/', '/mentions-legales', '/robots.txt', '/sitemap.xml'],
     },
+  },
+
+  robots: {
+    allow: '/',
+    sitemap: '/sitemap.xml',
+    credits: false,
+  },
+
+  sitemap: {
+    minify: true,
+    autoLastmod: true,
+    discoverImages: false,
+    discoverVideos: false,
+    xsl: false,
+    zeroRuntime: true,
+    credits: false,
+    urls: [
+      {
+        loc: '/',
+        changefreq: 'monthly',
+        priority: 1,
+      },
+    ],
+    exclude: ['/mentions-legales'],
   },
 
   image: {

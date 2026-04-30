@@ -22,8 +22,14 @@ import { siteData } from '~/data/site'
               {{ item.question }}
               <UIcon name="i-lucide-chevron-down" class="size-5 shrink-0 text-gold-500 transition group-open:rotate-180" aria-hidden="true" />
             </summary>
-            <p class="mt-4 leading-7 text-slate-600">
-              {{ item.answer }}
+            <p class="mt-4 whitespace-pre-line leading-7 text-slate-600">
+              <template
+                v-for="(part, partIndex) in item.answer"
+                :key="`${item.question}-${partIndex}`"
+              >
+                <strong v-if="part.strong" class="font-bold text-royal-950">{{ part.text }}</strong>
+                <span v-else>{{ part.text }}</span>
+              </template>
             </p>
           </details>
         </AnimatedCard>

@@ -1,20 +1,24 @@
 <script setup lang="ts">
 import { siteData } from '~/data/site'
 
-const canonical = siteData.seo.url
+const siteUrl = siteData.seo.url.replace(/\/$/, '')
+const canonical = siteUrl
+const ogImage = siteData.seo.image.startsWith('http')
+  ? siteData.seo.image
+  : `${siteUrl}${siteData.seo.image}`
 
 useSeoMeta({
   title: siteData.seo.title,
   description: siteData.seo.description,
   ogTitle: siteData.seo.title,
   ogDescription: siteData.seo.description,
-  ogImage: siteData.seo.image,
+  ogImage,
   ogUrl: canonical,
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: siteData.seo.title,
   twitterDescription: siteData.seo.description,
-  twitterImage: siteData.seo.image,
+  twitterImage: ogImage,
 })
 
 useHead({

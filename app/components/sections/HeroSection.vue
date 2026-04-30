@@ -53,7 +53,7 @@ import { siteData } from '~/data/site'
         >
           <div class="relative overflow-hidden rounded-[2rem] border border-royal-950/10 bg-white p-3 shadow-[0_30px_90px_rgba(14,32,68,0.14)]">
             <NuxtImg
-              src="/images/hero-residence.avif"
+              src="/images/hero-residence.png"
               alt="Résidence premium exploitée en gestion locative haut de gamme"
               width="1536"
               height="843"
