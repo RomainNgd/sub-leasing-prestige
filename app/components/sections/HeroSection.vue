@@ -39,7 +39,7 @@ import { siteData } from '~/data/site'
               :key="item"
               class="inline-flex items-center gap-2 rounded-full border border-royal-950/10 bg-white px-4 py-2 text-sm font-medium text-royal-950/76 shadow-sm"
             >
-              <UIcon name="i-lucide-check" class="size-4 text-gold-500" aria-hidden="true" />
+              <Icon name="i-lucide-check" class="size-4 text-gold-500" aria-hidden="true" />
               {{ item }}
             </span>
           </div>

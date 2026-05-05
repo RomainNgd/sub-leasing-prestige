@@ -25,7 +25,7 @@ import { siteData } from '~/data/site'
               :href="`mailto:${siteData.brand.email}`"
               class="rounded-3xl border border-white/10 bg-white/8 p-6 transition hover:-translate-y-0.5 hover:border-gold-300/50 hover:bg-white/12 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-300"
             >
-              <UIcon name="i-lucide-mail" class="size-6 text-gold-200" aria-hidden="true" />
+              <Icon name="i-lucide-mail" class="size-6 text-gold-200" aria-hidden="true" />
               <p class="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-gold-200">E-mail</p>
               <p class="mt-2 break-words text-lg font-semibold text-white">{{ siteData.brand.email }}</p>
             </a>
@@ -34,7 +34,7 @@ import { siteData } from '~/data/site'
               :href="siteData.brand.phoneHref"
               class="rounded-3xl border border-white/10 bg-white/8 p-6 transition hover:-translate-y-0.5 hover:border-gold-300/50 hover:bg-white/12 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-300"
             >
-              <UIcon name="i-lucide-phone" class="size-6 text-gold-200" aria-hidden="true" />
+              <Icon name="i-lucide-phone" class="size-6 text-gold-200" aria-hidden="true" />
               <p class="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-gold-200">Téléphone</p>
               <p class="mt-2 text-lg font-semibold text-white">{{ siteData.brand.phone }}</p>
             </a>

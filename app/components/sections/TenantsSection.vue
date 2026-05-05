@@ -22,7 +22,7 @@ import { siteData } from '~/data/site'
             :delay="index * 0.06"
             class="rounded-3xl border border-royal-950/10 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-gold-400/45 hover:shadow-xl hover:shadow-royal-950/8"
           >
-            <UIcon name="i-lucide-user-check" class="mb-5 size-7 text-gold-500" aria-hidden="true" />
+            <Icon name="i-lucide-user-check" class="mb-5 size-7 text-gold-500" aria-hidden="true" />
             <h3 class="text-xl font-bold text-royal-950">{{ profile }}</h3>
             <p class="mt-3 text-sm leading-7 text-slate-500">
               Profil vérifié, usage encadré et respect des lieux attendu avant toute occupation.

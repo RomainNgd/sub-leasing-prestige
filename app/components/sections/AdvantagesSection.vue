@@ -22,7 +22,7 @@ import { siteData } from '~/data/site'
           class="group rounded-3xl border border-white/10 bg-white/[0.055] p-6 shadow-xl shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-gold-300/42 hover:bg-white/[0.075]"
         >
           <div class="mb-6 grid size-12 place-items-center rounded-2xl border border-gold-300/30 bg-gold-300/12 text-gold-200">
-            <UIcon :name="item.icon" class="size-6" aria-hidden="true" />
+            <Icon :name="item.icon" class="size-6" aria-hidden="true" />
           </div>
           <h3 class="text-xl font-bold text-white">{{ item.title }}</h3>
           <p class="mt-3 leading-7 text-ivory-50/68">{{ item.text }}</p>

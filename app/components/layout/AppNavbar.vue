@@ -35,7 +35,7 @@ const closeMenu = () => {
         aria-label="Navigation principale"
       >
         <NuxtLink
-          to="#accueil"
+          to="/#accueil"
           :aria-label="`Retour à l'accueil ${siteData.brand.name}`"
           class="flex h-16 w-48 items-center justify-center rounded-[1.35rem] border border-gold-300/55 bg-ivory-50 px-4 py-2 shadow-[0_14px_34px_rgba(0,0,0,0.18)] ring-1 ring-white/25 transition hover:-translate-y-0.5 hover:border-gold-200 hover:shadow-[0_18px_44px_rgba(216,172,65,0.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-300 sm:w-60 lg:w-64"
           @click="closeMenu"
@@ -63,7 +63,7 @@ const closeMenu = () => {
         </div>
 
         <div class="hidden lg:block">
-          <PrimaryButton href="#contact" variant="primary" aria-label="Contacter Sub Leasing Prestige">
+          <PrimaryButton href="/#contact" variant="primary" aria-label="Contacter Sub Leasing Prestige">
             Nous contacter
           </PrimaryButton>
         </div>
@@ -76,7 +76,7 @@ const closeMenu = () => {
           aria-label="Ouvrir ou fermer le menu"
           @click="isOpen = !isOpen"
         >
-          <UIcon :name="isOpen ? 'i-lucide-x' : 'i-lucide-menu'" class="size-5" aria-hidden="true" />
+          <Icon :name="isOpen ? 'i-lucide-x' : 'i-lucide-menu'" class="size-5" aria-hidden="true" />
         </button>
       </nav>
 
@@ -95,7 +95,7 @@ const closeMenu = () => {
           >
             {{ item.label }}
           </NuxtLink>
-          <PrimaryButton href="#contact" class="mt-2 w-full" @click="closeMenu">
+          <PrimaryButton href="/#contact" class="mt-2 w-full" @click="closeMenu">
             Nous contacter
           </PrimaryButton>
         </div>

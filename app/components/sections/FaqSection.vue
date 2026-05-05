@@ -20,7 +20,7 @@ import { siteData } from '~/data/site'
           <details class="group rounded-3xl border border-royal-950/10 bg-white p-6 shadow-sm open:border-gold-400/50">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-lg font-bold text-royal-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-400">
               {{ item.question }}
-              <UIcon name="i-lucide-chevron-down" class="size-5 shrink-0 text-gold-500 transition group-open:rotate-180" aria-hidden="true" />
+              <Icon name="i-lucide-chevron-down" class="size-5 shrink-0 text-gold-500 transition group-open:rotate-180" aria-hidden="true" />
             </summary>
             <p class="mt-4 whitespace-pre-line leading-7 text-slate-600">
               <template

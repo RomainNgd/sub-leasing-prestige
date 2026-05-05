@@ -1,16 +1,32 @@
+import tailwindcss from '@tailwindcss/vite'
+
+const securityHeaders = {
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: process.env.NODE_ENV !== 'production' },
 
   modules: [
-    '@nuxt/ui',
+    '@nuxt/icon',
     '@nuxt/image',
     'motion-v/nuxt',
     '@nuxtjs/seo',
   ],
 
   css: ['~/assets/css/main.css'],
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
 
   components: [
     {
@@ -24,7 +40,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'fr',
       },
-      titleTemplate: '%s - Subleasing',
+      titleTemplate: '%s | Sub Leasing Prestige',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#0E2044' },
@@ -38,13 +54,14 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://subleasing.example.com',
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://sub-prestige.fr',
     name: 'Sub Leasing Prestige',
     description: 'Gestion locative premium avec loyer garanti et sous-location professionnelle.',
     defaultLocale: 'fr',
   },
 
   routeRules: {
+    '/**': { headers: securityHeaders },
     '/': { prerender: true },
     '/mentions-legales': { prerender: true },
     '/robots.txt': { prerender: true },
@@ -96,12 +113,5 @@ export default defineNuxtConfig({
 
   motionV: {
     directives: true,
-  },
-
-  ui: {
-    fonts: false,
-    theme: {
-      colors: ['primary', 'secondary', 'success', 'info', 'warning', 'error'],
-    },
   },
 })

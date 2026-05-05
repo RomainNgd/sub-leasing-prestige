@@ -9,19 +9,13 @@ const props = withDefaults(defineProps<{
   class: '',
 })
 
-const reduceMotion = ref(false)
-
-onMounted(() => {
-  reduceMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-})
-
-const initialState = computed(() => reduceMotion.value ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 })
+const initialState = { opacity: 1, y: 0 }
 const visibleState = { opacity: 1, y: 0 }
-const transition = computed(() => ({
-  duration: reduceMotion.value ? 0 : 0.55,
-  delay: reduceMotion.value ? 0 : props.delay,
+const transition = {
+  duration: 0.35,
+  delay: props.delay,
   ease: 'easeOut',
-}))
+}
 </script>
 
 <template>

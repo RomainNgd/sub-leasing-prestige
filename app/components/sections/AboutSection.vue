@@ -15,6 +15,7 @@ import { siteData } from '~/data/site'
               width="1448"
               height="1086"
               sizes="sm:92vw md:52vw lg:38vw"
+              format="webp"
               loading="lazy"
               class="aspect-[4/3] w-full rounded-[1.25rem] object-cover"
             />
@@ -35,7 +36,7 @@ import { siteData } from '~/data/site'
               class="flex min-h-20 items-center gap-3 rounded-2xl border border-royal-950/10 bg-white px-4 py-4 text-left text-sm font-bold leading-6 text-royal-950 shadow-sm"
             >
               <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-gold-400/25 bg-gold-300/12 text-gold-500">
-                <UIcon name="i-lucide-badge-check" class="size-5" aria-hidden="true" />
+                <Icon name="i-lucide-badge-check" class="size-5" aria-hidden="true" />
               </span>
               <span>{{ highlight }}</span>
             </div>

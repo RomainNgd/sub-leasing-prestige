@@ -24,6 +24,6 @@ const classes = computed(() => [
 <template>
   <NuxtLink :to="href" :aria-label="ariaLabel" :class="classes">
     <slot />
-    <UIcon name="i-lucide-arrow-right" class="size-4 transition group-hover:translate-x-0.5" aria-hidden="true" />
+    <Icon name="i-lucide-arrow-right" class="size-4 transition group-hover:translate-x-0.5" aria-hidden="true" />
   </NuxtLink>
 </template>

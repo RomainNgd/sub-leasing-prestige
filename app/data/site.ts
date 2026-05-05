@@ -1,37 +1,48 @@
-const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://subleasing.example.com'
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://sub-prestige.fr'
 
 export const siteData = {
   brand: {
     name: 'Sub Leasing Prestige',
     shortName: 'Sub Prestige',
+    legalName: 'EI Quentin Taymont',
+    publicationDirector: 'Quentin Taymont',
     baseline: 'Gestion locative premium',
     logo: '/images/Sublocation.png',
     email: 'contact@sub-prestige.com',
     phone: '+33 7 67 16 50 18',
     phoneHref: 'tel:+33767165018',
-    city: 'France',
+    city: 'Choisy-au-Bac',
+    address: {
+      streetAddress: '673 rue du Sergenteret',
+      postalCode: '60750',
+      addressLocality: 'Choisy-au-Bac',
+      addressCountry: 'FR',
+    },
+    areaServed: ['France', 'Oise', 'Compiègne', 'Choisy-au-Bac'],
   },
   seo: {
-    title: 'Sub Leasing Prestige | Gestion locative premium et loyer garanti',
+    title: 'Gestion locative premium et loyer garanti',
     description:
       'Sub Leasing Prestige accompagne les propriétaires avec une solution de sous-location professionnelle, loyer mensuel garanti, gestion complète et sélection rigoureuse des occupants.',
     image: '/images/hero-residence.png',
+    imageWidth: 1200,
+    imageHeight: 630,
     url: siteUrl,
   },
   navigation: [
-    { label: 'À propos', href: '#a-propos' },
-    { label: 'Avantages', href: '#avantages' },
-    { label: 'Méthode', href: '#methode' },
-    { label: 'Locataires', href: '#locataires' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'À propos', href: '/#a-propos' },
+    { label: 'Avantages', href: '/#avantages' },
+    { label: 'Méthode', href: '/#methode' },
+    { label: 'Locataires', href: '/#locataires' },
+    { label: 'FAQ', href: '/#faq' },
   ],
   hero: {
     eyebrow: 'Sous-location professionnelle pour biens meublés',
     title: 'Le confort professionnel, sans compromis pour votre bien.',
     subtitle:
       "Sub Leasing Prestige transforme la gestion de votre logement meublé en revenu fixe, ponctuel et piloté avec exigence, de la sélection des occupants à l'entretien quotidien.",
-    primaryCta: { label: 'Évaluer mon bien', href: '#contact' },
-    secondaryCta: { label: 'Découvrir la méthode', href: '#methode' },
+    primaryCta: { label: 'Évaluer mon bien', href: '/#contact' },
+    secondaryCta: { label: 'Découvrir la méthode', href: '/#methode' },
     trust: ['Loyer fixe mensuel', 'Aucun frais de gestion', 'Sélection haut de gamme'],
     metrics: [
       { value: '0 €', label: 'frais cachés' },

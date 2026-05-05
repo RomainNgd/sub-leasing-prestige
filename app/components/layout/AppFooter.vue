@@ -9,7 +9,7 @@ import { siteData } from '~/data/site'
         <div>
           <p class="font-display text-2xl font-semibold">{{ siteData.brand.name }}</p>
           <p class="mt-3 max-w-md text-sm leading-7 text-ivory-50/68">
-            Gestion locative premium pour propriétaires de biens meublés. Les informations légales et sociétaires doivent être complétées avant mise en ligne.
+            Gestion locative premium pour propriétaires de biens meublés, avec loyer garanti et sous-location professionnelle encadrée.
           </p>
         </div>
 
